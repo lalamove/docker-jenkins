@@ -1,4 +1,4 @@
-FROM jenkins:2.7.1
+FROM jenkins:2.19.1
 USER root
 RUN apt-get update
 RUN apt-get install -y php5 jq maven gradle
