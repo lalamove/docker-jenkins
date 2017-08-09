@@ -1,4 +1,4 @@
-FROM jenkins:2.19.1
+FROM docker pull jenkinsci/blueocean:1.1.6
 USER root
 
 RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
