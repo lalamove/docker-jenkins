@@ -1,0 +1,25 @@
+version: '2'
+
+services:
+  jenkins2:
+    image: lalamove/jenkins:2.7.1
+    container_name: jenkins2
+    hostname: jenkins2
+    restart: always
+    expose:
+      - "8080"
+      - "50000"
+    environment:
+      - VIRTUAL_HOST=jenkins2.easygroup.co
+      - VIRTUAL_PORT=8080
+      - VIRTUAL_PROTO=HTTP
+      - JAVA_OPTS=-Duser.timezone=Asia/Hong_Kong
+    volumes:
+      - "../home:/var/jenkins_home"
+    network_mode: "bridge"
+#    logging:
+#    #      driver: awslogs
+#    #      options:
+#    #        awslogs-region: ap-southeast-1
+#    #        awslogs-group: EV-admin
+#    #        awslogs-stream: gitlab

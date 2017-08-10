@@ -1,2 +1,0 @@
-# docker-jenkins
-jenkins image
